@@ -1,4 +1,4 @@
-# 📝 Project: Task API (RESTful API)
+# Project: Task API (RESTful API)
 
 ### Overview
 
@@ -6,7 +6,7 @@ This is a simple **RESTful API** built with **Node.js** and **Express** to manag
 
 ---
 
-### 🚀 Features
+### Features
 
 - **GET /tasks**: Retrieve a list of all tasks.
 - **GET /tasks/:id**: Retrieve a specific task by ID.
@@ -16,7 +16,7 @@ This is a simple **RESTful API** built with **Node.js** and **Express** to manag
 
 ---
 
-### 🛠️ Prerequisites
+### Prerequisites
 
 Before you begin, ensure that you have the following installed:
 
@@ -25,15 +25,23 @@ Before you begin, ensure that you have the following installed:
 
 ---
 
-### 📂 Project Structure
+### Project Structure
 
-task-api/ ├── index.js # Main entry point to start the Express server ├── routes/ │ └── tasks.js # Defines the routes for the /tasks endpoint ├── controllers/ │ └── taskController.js # Contains the logic for each route (CRUD operations) ├── models/ │ └── taskModel.js # Manages task data in memory (CRUD methods) └── test.js # Test script to send requests to the API using Axios
+```## 📁 Project Structure
+task-api/
+├── index.js               # Main entry point to start the Express server
+├── routes/
+│   └── tasks.js           # Defines the routes for the /tasks endpoint
+├── controllers/
+│   └── taskController.js  # Contains the logic for each route (CRUD operations)
+├── models/
+│   └── taskModel.js       # Manages task data in memory (CRUD methods)
+└── test.js                # Test script to send requests to the API using Axios
+```
 
 ---
 
----
-
-### 📄 File Explanation
+### File Explanation
 
 #### 1. **`index.js`**
 
@@ -85,112 +93,180 @@ task-api/ ├── index.js # Main entry point to start the Express server ├�
 
 ---
 
-### 🏃‍♂️ How to Run
+### How to Run
 
 #### 1. **Clone the repository** (if you haven't already)
 
 ```bash
 git clone https://github.com/your-username/task-api.git
 cd task-api
+```
 
-#### 2\. **Install dependencies**
+---
+
+### Install Dependencies
 
 Run this command to install required dependencies:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditnpm install   `
+```bash
+npm install
+```
 
-#### 3\. **Start the Express server**
+---
+
+### Start the Express Server
 
 To start the server and keep it running (with automatic restarts):
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditnpx nodemon index.js   `
+```bash
+npx nodemon index.js
+```
 
 You should see:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   arduinoCopyEditServer is running on http://localhost:3000   `
-
-#### 4\. **Test the API**
-
-You can either use **Postman**, **curl**, or the test.js script to interact with the API.
-
-*   **To create a task using test.js:**
-
-
-Run:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditnode test.js   `
-
-*   **Alternatively, use curl or Postman\` to test:**
-
-
-**POST** a task:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditcurl -X POST http://localhost:3000/tasks \  -H "Content-Type: application/json" \  -d '{"title":"Buy eggs","description":"Free-range eggs"}'   `
-
-**GET** all tasks:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditcurl http://localhost:3000/tasks   `
-
-### 📑 API Endpoints
-
-#### 1\. **GET /tasks**: Retrieve a list of all tasks
-
-Example:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditcurl http://localhost:3000/tasks   `
-
-Response:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   jsonCopyEdit[    {      "id": 1,      "title": "Buy milk",      "description": "2% milk from store"    }  ]   `
-
-#### 2\. **GET /tasks/:id**: Retrieve a task by ID
-
-Example:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditcurl http://localhost:3000/tasks/1   `
-
-Response:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   jsonCopyEdit{    "id": 1,    "title": "Buy milk",    "description": "2% milk from store"  }   `
-
-#### 3\. **POST /tasks**: Create a new task
-
-Example:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditcurl -X POST http://localhost:3000/tasks \  -H "Content-Type: application/json" \  -d '{"title":"Buy eggs","description":"Free-range eggs"}'   `
-
-Response:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   jsonCopyEdit{    "id": 2,    "title": "Buy eggs",    "description": "Free-range eggs"  }   `
-
-#### 4\. **PUT /tasks/:id**: Update an existing task
-
-Example:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditcurl -X PUT http://localhost:3000/tasks/2 \  -H "Content-Type: application/json" \  -d '{"title":"Buy eggs","description":"Organic free-range eggs"}'   `
-
-Response:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   jsonCopyEdit{    "id": 2,    "title": "Buy eggs",    "description": "Organic free-range eggs"  }   `
-
-#### 5\. **DELETE /tasks/:id**: Delete a task by ID
-
-Example:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditcurl -X DELETE http://localhost:3000/tasks/2   `
-
-Response:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   jsonCopyEdit// No content, status 204   `
-
-### 🐞 Error Handling
-
-*   **400 Bad Request**: Missing title or description in POST and PUT requests.
-
-*   **404 Not Found**: Task not found (for GET, PUT, and DELETE operations).
-
-
-That's it! This should be all the information you need to run the API, test it, and modify it as needed. Let me know if you need any additional sections for the README!
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML``   yamlCopyEdit  ---  This is a simplified **README.md** file with just explanations of the files, the structure of the project, how to run it, and how to test it. You can now copy and paste it into your `README.md` file. Let me know if you need any further adjustments!   ``
+```bash
+Server is running on http://localhost:3000
 ```
+
+---
+
+### Test the API
+
+You can either use Postman, curl, or the test.js script to interact with the API.
+
+To create a task using test.js, run:
+
+```bash
+node test.js
+```
+
+#### Alternatively, use curl or Postman:
+
+#### POST a task:
+
+```bash
+curl -X POST http://localhost:3000/tasks \
+-H "Content-Type: application/json" \
+-d '{"title":"Buy eggs","description":"Free-range eggs"}'
+```
+
+#### GET all tasks:
+
+```bash
+curl http://localhost:3000/tasks
+```
+
+---
+
+### API Endpoints
+
+#### 1. GET /tasks: Retrieve a list of all tasks
+
+Example:
+
+```bash
+curl http://localhost:3000/tasks
+```
+
+Response:
+
+```json
+[
+  {
+    "id": 1,
+    "title": "Buy milk",
+    "description": "2% milk from store"
+  }
+]
+```
+
+---
+
+#### 2. GET /tasks/:id: Retrieve a task by ID
+
+Example:
+
+```bash
+curl http://localhost:3000/tasks/1
+```
+
+Response:
+
+```json
+{
+  "id": 1,
+  "title": "Buy milk",
+  "description": "2% milk from store"
+}
+```
+
+---
+
+#### 3. POST /tasks: Create a new task
+
+Example:
+
+```bash
+curl -X POST http://localhost:3000/tasks \
+-H "Content-Type: application/json" \
+-d '{"title":"Buy eggs","description":"Free-range eggs"}'
+```
+
+Response:
+
+```json
+{
+  "id": 2,
+  "title": "Buy eggs",
+  "description": "Free-range eggs"
+}
+```
+
+---
+
+#### 4. PUT /tasks/:id: Update an existing task
+
+Example:
+
+```bash
+curl -X PUT http://localhost:3000/tasks/2 \
+-H "Content-Type: application/json" \
+-d '{"title":"Buy eggs","description":"Organic free-range eggs"}'
+```
+
+Response:
+
+```json
+{
+  "id": 2,
+  "title": "Buy eggs",
+  "description": "Organic free-range eggs"
+}
+```
+
+---
+
+#### 5. DELETE /tasks/:id: Delete a task by ID
+
+Example:
+
+```bash
+curl -X DELETE http://localhost:3000/tasks/2
+```
+
+Response:
+
+```json
+// No content, status 204
+```
+
+---
+
+### Error Handling
+
+- 400 Bad Request: Missing title or description in POST and PUT requests.
+- 404 Not Found: Task not found (for GET, PUT, and DELETE operations).
+
+---
+
+That's it! This should be all the information you need to run the API, test it, and modify it as needed.
